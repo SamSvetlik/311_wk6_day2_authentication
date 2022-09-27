@@ -9,9 +9,9 @@ const app = express();
 const port = process.env.PORT || 4001;
 
 app.use(bodyParser.json())
-app.use(logger)
-app.use('/users', usersRouter)
+// app.use(logger)
 app.use('/auth', authRouter)
+app.use('/users', usersRouter)
 
 app.get('/', (req, res) => {
   res.send('Welcome to our server!')
